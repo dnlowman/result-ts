@@ -78,4 +78,18 @@ describe(`the Result type`, () => {
     expect(unwrappedValue).toBeDefined();
     expect(unwrappedValue).toBe(error);
   });
+
+  it(`should contain a public flatMap method which returns the result of the mapper`, () => {
+    // Given
+    const value = 123;
+    const ok = Result.ok(123);
+    const result = Result.ok(ok);
+
+    // When
+    const mapped = result.flatMap(x => x);
+
+    // Then
+    expect(mapped).toBeDefined();
+    expect(mapped.getValue()).toBe(value);
+  })
 });

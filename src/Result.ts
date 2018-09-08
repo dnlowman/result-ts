@@ -20,4 +20,12 @@ export default class Result<T> {
   public getError(): string | undefined {
     return this.error;
   }
+
+  public flatMap<U>(fn: (value: T | undefined) => Result<U>): Result<U> {
+    if (this.isError()) {
+      return Result.error(this.error || 'Error');
+    }
+
+    return fn(this.getValue());
+  }
 }
