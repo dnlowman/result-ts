@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/{{github-user-name}}/{{github-app-name}}.svg?branch=master)](https://travis-ci.org/{{github-user-name}}/{{github-app-name}}.svg?branch=master)
-[![Coverage Status](https://coveralls.io/repos/github/{{github-user-name}}/{{github-app-name}}/badge.svg?branch=master)](https://coveralls.io/github/{{github-user-name}}/{{github-app-name}}?branch=master)
+[![Build Status](https://travis-ci.org/dnlowman/result-ts.svg?branch=master)](https://travis-ci.org/dnlowman/result-ts.svg?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/dnlowman/result-ts/badge.svg?branch=master)](https://coveralls.io/github/dnlowman/result-ts?branch=master)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
 # Using this module in other modules
@@ -10,22 +10,16 @@ Here is a quick example of how this module can be used in other modules. The [Ty
 
 Now assuming you have published this amazing module to _npm_ with the name `my-amazing-lib`, and installed it in the module in which you need it -
 
-- To use the `Greeter` class in a TypeScript file -
+- To use the `Result` class in a TypeScript file -
 
 ```ts
-import { Greeter } from "my-amazing-lib";
-
-const greeter = new Greeter("World!");
-greeter.greet();
+import { Result } from "result-ts";
 ```
 
-- To use the `Greeter` class in a JavaScript file -
+- To use the `Result` class in a JavaScript file -
 
 ```js
-const Greeter = require('my-amazing-lib').Greeter;
-
-const greeter = new Greeter('World!');
-greeter.greet();
+const Result = require('result.ts');
 ```
 
 ## Setting travis and coveralls badges
